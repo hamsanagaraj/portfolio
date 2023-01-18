@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HAMSA-PORTFOLIO</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/b800daac61.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="conatiner">
+            <nav>
+                <img src="images/name-logo-1.jpg" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">HOME</a></li>
+                    <li><a href="#about">ABOUT</a></li>
+                    <li><a href="#portfolio">PORTFOLIO</a></li>
+                    <li><a href="#contact">CONTACT</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p> <span>B.tech Graduate</span> </p>
+                <h1>Hello, I'm Hamsavani</h1>
+            </div>
+        </div>
+    </div>
+    <!-- ----------about-------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/portfolio-pic2.jpg" >
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-tittle">Know more</h1>
+                    <p> Hi....I'm Hamsavani
+                        My portfolio is a representation of all that I've learned and accomplished as B.tech student.
+                        With a specialization in software languages with well devolped skills and intrests
+                         I'm looking forward for  oppurtunities to work as a Frontend Developer.</p>
+
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('education')">Education</p> 
+                            <p class="tab-links" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links " onclick="opentab('certifications')">Certifications</p> 
+                        </div>
+                        <div class="tab-contents active-tabs" id="education">
+                            <ul>
+                                <li><span>B.tech - 5.55 CGPA</span><br>Presidency University, Bengaluru 2022</li>
+                                <li><span>PUC - 67%</span><br>M.E.S,PU COLLEGE, Bengaluru - 2018</li>
+                                <li><span>SSLC - 89.92%</span><br>Hymamshu Jyothi Kala Peetha, Bengaluru 2016</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="skills">
+                            <ul>
+                                <li><span>HTML, CSS, JAVASCRIPT</span></li>
+                                <li><span>SQL</span></li>
+                                <li><span>JAVA</span></li>
+                                <li><span>C++</span></li>
+                                <li><span>PYTHON</span></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="certifications">
+                            <ul>
+                                <li><span>Could	computing value	added course in	Presidency University- 2022</li>
+                                <li><span>Course completion	certificate	in intermediate python in Presidency University-2022</li>
+                                <li><span>Completed	Java, HTML and SQL Training of course at	“Jspiders” Rajajinagar,	Bengaluru. – 2022</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ----------portfolio------- -->
+   <div id="portfolio">
+     <div class="container">
+        <h1 class="sub-tittle">Projects & Internship</h1>
+        <div class="portfolio-list">
+            <div>
+                <i class="fa-solid fa-globe"></i>
+                <h2>Web Design</h2>
+                <p>Designed a College website from scrape using HTML,CSS and JAVASCRIPT</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+              <i class="fa-sharp fa-solid fa-laptop-file"></i>
+                <h2>Internship</h2>
+                <p>Parlotech Solutions LLP<br>Minor works of creating a premanent path for JDK in net beans & uploading client files in AWS server</p>
+                <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code"></i>
+                <h2>Mini IOT Project</h2>
+                <p>Devolped a mini project named Smart agriculture using IOT</p>
+                <a href="#">Learn more</a>
+            </div>
+        </div> 
+     </div>
+   </div>
+   <!-- -----------contact------- -->
+<div id="contact">
+    <div class="conatiner">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact me</h1>
+                <p><i class="fa-solid fa-paper-plane"></i>hamsanagaraj153@gmail.com</p>
+                <p><i class="fa-solid fa-mobile-screen"></i>9019312563</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/hamsavani-n-8944aa1aa"><i class="fa-brands fa-linkedin"></i></a>
+                
+                     <div>
+                        <a href="images/Hamsavani N_B.tech_Resume.pdf (3) new.pdf" download class="btn btn2">Download CV</a>
+                     </div>
+            
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>copyright © Hamsavani N. Portfolio - 2023-24</p>
+    </div>
+</div>
+  <script>
+
+      var tablinks = document.getElementsByClassName("tab-links");
+      var tabcontents = document.getElementsByClassName("tab-contents");
+
+      function opentab(tabname)
+      {
+        for(tablink of tablinks)
+        {
+            tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents)
+        {
+            tabcontent.classList.remove("active-tabs");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tabs")
+      }
+ 
+      </script>  
+
+      <script>
+
+       var sidemeu = document.getElementById("sidemenu"); 
+
+       function openmenu(){
+        sidemeu.style.right = "0";
+
+       }
+       
+       function closemenu(){
+        sidemeu.style.right = "-200px";
+
+       }
+        
+       
+     </script>
+</body>
+</html>
